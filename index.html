@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html class="light" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
@@ -8,198 +7,293 @@
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
 <style>
-      .material-symbols-outlined {
-        font-variation-settings:
-        'FILL' 0,
-        'wght' 400,
-        'GRAD' 0,
-        'opsz' 24
-      }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+        }
     </style>
 <script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            colors: {
-              "primary": "#137fec",
-              "background-light": "#f6f7f8",
-              "background-dark": "#101922",
-              "primary-accent": "#4A90E2",
-              "secondary-accent": "#E85D75",
-              "text-dark": "#333333",
-              "text-light": "#F8F9FA",
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "brand-blue-dark": "#004A8D",
+                        "brand-blue-light": "#0096D6",
+                        "brand-red-cta": "#B61927",
+                        "brand-accent-light-blue": "#E0F2FE",
+                        "background-light": "#FFFFFF",
+                        "background-dark": "#020617",
+                        "text-dark": "#1e293b",
+                        "text-light": "#f8fafc",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
             },
-            fontFamily: {
-              "display": ["Manrope", "sans-serif"]
-            },
-            borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
-          },
-        },
-      }
+        }
     </script>
 </head>
 <body class="font-display bg-background-light dark:bg-background-dark text-text-dark dark:text-text-light">
 <div class="relative w-full overflow-x-hidden">
-<!-- TopNavBar -->
-<header class="sticky top-4 z-50 mx-auto max-w-5xl">
-<div class="flex items-center justify-between whitespace-nowrap rounded-lg border border-white/20 bg-white/60 px-6 py-3 shadow-sm backdrop-blur-lg dark:border-slate-700/50 dark:bg-background-dark/60">
+<header class="sticky top-4 z-50 mx-auto max-w-7xl px-4">
+<div class="flex items-center justify-between whitespace-nowrap rounded-lg border border-white/20 bg-white/80 px-6 py-3 shadow-sm backdrop-blur-lg dark:border-slate-700/50 dark:bg-background-dark/80">
 <div class="flex items-center gap-3">
-<div class="size-6 text-primary-accent">
-<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<div class="size-6 text-brand-blue-dark">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
 <path clip-rule="evenodd" d="M12.0799 24L4 19.2479L9.95537 8.75216L18.04 13.4961L18.0446 4H29.9554L29.96 13.4961L38.0446 8.75216L44 19.2479L35.92 24L44 28.7521L38.0446 39.2479L29.96 34.5039L29.9554 44H18.0446L18.04 34.5039L9.95537 39.2479L4 28.7521L12.0799 24Z" fill="currentColor" fill-rule="evenodd"></path>
 </svg>
 </div>
 <h2 class="text-lg font-bold tracking-[-0.015em] text-text-dark dark:text-text-light">OncoClinic</h2>
 </div>
 <nav class="hidden items-center gap-8 md:flex">
-<a class="text-sm font-medium hover:text-primary-accent" href="#">About Us</a>
-<a class="text-sm font-medium hover:text-primary-accent" href="#">Treatments</a>
-<a class="text-sm font-medium hover:text-primary-accent" href="#">Our Team</a>
-<a class="text-sm font-medium hover:text-primary-accent" href="#">Contact</a>
+<a class="text-sm font-medium hover:text-brand-blue-light" href="#">Home</a>
+<a class="text-sm font-medium hover:text-brand-blue-light" href="#">Services</a>
+<a class="text-sm font-medium hover:text-brand-blue-light" href="#">Team</a>
+<a class="text-sm font-medium hover:text-brand-blue-light" href="#">Contact</a>
 </nav>
-<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary-accent text-white text-sm font-bold leading-normal tracking-[0.015em] transition-transform hover:scale-105">
-<span class="truncate">Book Consultation</span>
+<div class="flex items-center gap-4">
+<a class="hidden text-sm font-bold text-brand-blue-dark dark:text-brand-blue-light lg:block" href="tel:555-123-4567">
+<span class="material-symbols-outlined align-middle text-lg">call</span>
+                        (555) 123-4567
+                    </a>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-brand-red-cta text-white text-sm font-bold leading-normal tracking-[0.015em] transition-transform hover:scale-105">
+<span class="truncate">Book Now</span>
 </button>
+</div>
 </div>
 </header>
 <main class="flex flex-col items-center">
-<div class="w-full max-w-5xl px-4">
-<!-- HeroSection -->
+<div class="absolute inset-x-0 top-0 -z-10 h-[950px] w-full bg-gradient-to-br from-brand-blue-light to-brand-blue-dark"></div>
+<div class="w-full max-w-7xl px-4">
 <section class="py-20 md:py-28">
 <div class="grid grid-cols-1 gap-12 lg:grid-cols-2">
 <div class="flex flex-col justify-center gap-8 text-center lg:text-left">
 <div class="flex flex-col gap-4">
-<h1 class="text-4xl font-black leading-tight tracking-tighter md:text-5xl lg:text-6xl text-text-dark dark:text-text-light">Advanced Cancer Care With Cutting-Edge 3D Diagnostics</h1>
-<p class="text-base font-normal leading-normal text-slate-600 dark:text-slate-400">Experience a new standard of care with our patient-focused approach, revolutionary diagnostic technologies, and a compassionate team dedicated to your healing journey.</p>
+<h1 class="text-4xl font-black leading-tight tracking-tighter text-white md:text-5xl lg:text-6xl">Compassionate Cancer Care, Powered by Hope and Innovation</h1>
+<p class="text-base font-normal leading-normal text-blue-100 dark:text-blue-100">Your path to healing starts here. We combine advanced technology with personalized, human-centered care to fight cancer together.</p>
 </div>
 <div class="flex flex-wrap justify-center gap-4 lg:justify-start">
-<button class="flex h-12 min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-primary-accent px-5 text-base font-bold text-white transition-transform hover:scale-105">
+<button class="flex h-12 min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-brand-red-cta px-5 text-base font-bold text-white transition-transform hover:scale-105">
 <span class="truncate">Book Consultation</span>
 </button>
-<button class="flex h-12 min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg border border-slate-300 bg-white/50 px-5 text-base font-bold text-text-dark transition-transform hover:scale-105 dark:border-slate-700 dark:bg-slate-800/50 dark:text-text-light">
+<button class="flex h-12 min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg border border-white/50 bg-white/20 px-5 text-base font-bold text-white backdrop-blur-sm transition-transform hover:scale-105 hover:bg-white/30 dark:border-white/50 dark:bg-white/20 dark:text-white">
 <span class="truncate">Call Oncology Center</span>
 </button>
 </div>
+<div class="mt-8 flex items-center justify-center gap-6 lg:justify-start">
+<span class="text-sm font-semibold text-white">Trusted by:</span>
+<div class="flex items-center gap-6 opacity-75">
+<img alt="Accreditation Body 1" class="h-8 grayscale invert brightness-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwwK-092OLcIzp3c33vzLYe_tXHgj1Rw9kfIN80FFrjAfqOgUrGIObrt-7DiMLU-nDJmxkdZaEW_q0nA6BYt8dTlxKgcRXDa5qIiNlSaMX3d0WqHqotLdMoxasdXvgm1wOA13i7n17UkHuoD6q19dxen4caDumkc9h77bIV3SkwwtvZFwox0iVuDX-JLVWgvkjGz1gvmDXTXUwHIX7qaNLygaa6Kyasg-Iu97gxWQHCR_I57n6hasvo2QSRqxIeuVHQ_UkCpGm2Kw"/>
+<img alt="Accreditation Body 2" class="h-8 grayscale invert brightness-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuChD39Ii1K4P5AjJOL4rbgoNQmGy0zITncB2AmJYhUlyTDrEGCSQJQyI4CzbR7TYfGOrWeDKOh4POCp02zn6gj0Wopco9_O6FA4F7bUFeH0lSAYtWZoY0Rgv_yS501aZKiDWmHZK_QSfq9eEYIU-zSDSXGzVw-s4ntsc4ugeIOv2sldMeqTezGGCh7xbVwyykgE5vnESoiHUxSxf5Jt7xrbNTDP-5uHbrypWzl8oCP8oks__qrNQ4sn3NTXzvGHMfphmNOxbjaQnCE"/>
+<img alt="Accreditation Body 3" class="h-8 grayscale invert brightness-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFywM9JMv8z4qbUu0RlxRX_1amrSgsc-6528D4IQbi6FVKGGQB7OFTilQMHK-SIeejmGHNgiDBjBiEvqnDzuUi9K8YtJyBG9dRSUlNNav1iAkQkJYDUwUXtkPRc5FE8eYTdVKlNsONWQ-mliTSzlwjJLHvsKlrjq0QHYmioi7uJfUbwo8bYndUVtQo2ldWystHK2FnP-gs4wgW7joCkk16k6LTJ3iYKGzZyBNrDsqVq6YZAXLm1Xo6OwXQLuZ7ZpWZADi2t1z5e20"/>
+</div>
+</div>
 </div>
 <div class="relative flex h-80 min-h-[300px] items-center justify-center lg:h-auto">
-<div class="aspect-square w-full max-w-md rounded-full bg-primary-accent/10 blur-3xl"></div>
+<div class="aspect-square w-full max-w-md rounded-full bg-white/10 blur-3xl"></div>
 <img class="absolute inset-0 m-auto h-full w-auto object-contain" data-alt="3D render of an oncologist doctor character" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUgYDd55YRgg97AI_zEsedPYGZxaV4AJ32QCSb1MohcukVz4RDNU63wJpwvgeoPcXJ9nsHXIGuu9bgVYqufAHu7KrHwymythxWyyeRY2i_1Aorn83wfDa2SOKdzHnJzkXHLCJumdEHjiyAEBrq2bJotVnQ5byHhXKdUr5WAPSjcoSwp_M03_N41JDWyCsVMgtX2z4Fe5kF5ObK3YbFT-VGZoFoKWRvpP63BziCxNBRAeW7gzdy0IAr76mOUamsnXPw4FgH0JA2_Yg"/>
-<img class="absolute left-0 top-10 h-20 w-20 animate-pulse" data-alt="Floating 3D DNA strand icon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDoPRtUMIBqSgRcnJp-ZDQrEl2WKlbH3s8xy-juYofbA8dTNCPzr0QYRlaIIbIXZatKUtexhfAcUkSTDp_XM7_rX39iJ-uxtbOqsN2BH3ZKJTBAH3_eoZPyAtluddHweXVW1KYw90AKhdGEtXhsetn-3RBlz5UD5v_vK3h6UV6aloBwEYW8ymL2Xj8dlkEelw8xEPc3eMlTYXKUtGGrUTUZiwDQKjBXY3wAToTsIgPi_kzS0n4SSmDTpqUepXJYsRBDhJA46S2E_XE"/>
-<img class="absolute bottom-5 right-0 h-16 w-16 animate-pulse [animation-delay:0.5s]" data-alt="Floating 3D tumor cell model icon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9s3QBF7X82cAMmYNVpfvPkaf9ftH3qsR46RZ0N8kMjlO2Pr409m6W9wYWWSwgnrmtZKokNOqN4AtyKNyNfKLiF2kJJIoBSKPpfrAIcNhtFFIKBOYwzynquxMZ8QIl_WbUFmbHDu9GTA27wdhhaaewudNFwY3XCeeuLJMtpqTdCKX5lXkvIZ_CZMP6MaNtKGywDIYCkCxoA0JpF1hMypzQ-iWQ1gLtOxZaR4YUeUrHng5rBcMcNvU3WH5B8EzBRdp1woQKccjIMug"/>
-<img class="absolute bottom-1/4 left-5 h-20 w-20 animate-pulse [animation-delay:1s]" data-alt="Floating 3D chemotherapy drip icon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHylVOsvt0RpSqMsx5WHhQpgkIngxnxUxdlOjSZUea8Je2yMGf2XchawD1FThkNPlJandNnKdBbDaXsvlRPGyimfzd6idPkvsvrg5sUw1XsbBtCJOdfVhwksWf-J2z-p_aWKFLG04S7wvw1MafqUZLWKKKl9P-EoVEoE-KIkWRKA0O-SRo7ZPe9xP6WdR-7iFx_4gOILTmr4_vkMELGNespZqOQA_MAl5m2FZSYw8zez-A9PI2U9Q_Jp8qfQnjWeXxv1d8NGKwVe8"/>
-<img class="absolute right-5 top-5 h-20 w-20 animate-pulse [animation-delay:1.5s]" data-alt="Floating 3D pink ribbon icon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXMLoB8gDyQcZEiyvlNbPLqmVsDEK-ae1mYEF2XTfuE_3sYn2GLeEK-LVjQUja_BE1oo49Jkre79VIeLiURDVxDnGd3CKR228k5aTU7yb7Z1cF0sMEmjFdVGpuqvgPO69Cl9GMhjsmZiT57kZox-V7s61Ef1KUNTXKtA3rfa4qIiT2ViGWvW6jCRTjZLstjCJl_z5R57u6RKZ_8b_b10Y-rrCBTfIq27p0jhcxwMjUziTMxpzGv3RbF9MAokxe4IamZGZDjzPvdGA"/>
+<img class="absolute left-0 top-10 h-20 w-20" data-alt="Floating 3D DNA strand icon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDoPRtUMIBqSgRcnJp-ZDQrEl2WKlbH3s8xy-juYofbA8dTNCPzr0QYRlaIIbIXZatKUtexhfAcUkSTDp_XM7_rX39iJ-uxtbOqsN2BH3ZKJTBAH3_eoZPyAtluddHweXVW1KYw90AKhdGEtXhsetn-3RBlz5UD5v_vK3h6UV6aloBwEYW8ymL2Xj8dlkEelw8xEPc3eMlTYXKUtGGrUTUZiwDQKjBXY3wAToTsIgPi_kzS0n4SSmDTpqUepXJYsRBDhJA46S2E_XE"/>
+<img class="absolute bottom-5 right-0 h-16 w-16" data-alt="Floating 3D tumor cell model icon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9s3QBF7X82cAMmYNVpfvPkaf9ftH3qsR46RZ0N8kMjlO2Pr409m6W9wYWWSwgnrmtZKokNOqN4AtyKNyNfKLiF2kJJIoBSKPpfrAIcNhtFFIKBOYwzynquxMZ8QIl_WbUFmbHDu9GTA27wdhhaaewudNFwY3XCeeuLJMtpqTdCKX5lXkvIZ_CZMP6MaNtKGywDIYCkCxoA0JpF1hMypzQ-iWQ1gLtOxZaR4YUeUrHng5rBcMcNvU3WH5B8EzBRdp1woQKccjIMug"/>
+<img class="absolute bottom-1/4 left-5 h-20 w-20" data-alt="Floating 3D chemotherapy drip icon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHylVOsvt0RpSqMsx5WHhQpgkIngxnxUxdlOjSZUea8Je2yMGf2XchawD1FThkNPlJandNnKdBbDaXsvlRPGyimfzd6idPkvsvrg5sUw1XsbBtCJOdfVhwksWf-J2z-p_aWKFLG04S7wvw1MafqUZLWKKKl9P-EoVEoE-KIkWRKA0O-SRo7ZPe9xP6WdR-7iFx_4gOILTmr4_vkMELGNespZqOQA_MAl5m2FZSYw8zez-A9PI2U9Q_Jp8qfQnjWeXxv1d8NGKwVe8"/>
+<img class="absolute right-5 top-5 h-20 w-20" data-alt="Floating 3D pink ribbon icon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXMLoB8gDyQcZEiyvlNbPLqmVsDEK-ae1mYEF2XTfuE_3sYn2GLeEK-LVjQUja_BE1oo49Jkre79VIeLiURDVxDnGd3CKR228k5aTU7yb7Z1cF0sMEmjFdVGpuqvgPO69Cl9GMhjsmZiT57kZox-V7s61Ef1KUNTXKtA3rfa4qIiT2ViGWvW6jCRTjZLstjCJl_z5R57u6RKZ_8b_b10Y-rrCBTfIq27p0jhcxwMjUziTMxpzGv3RbF9MAokxe4IamZGZDjzPvdGA"/>
 </div>
 </div>
 </section>
-<!-- Services Section -->
 <section class="py-16">
-<!-- SectionHeader -->
-<div class="text-center">
-<h2 class="text-3xl font-bold leading-tight tracking-tighter text-text-dark dark:text-text-light">Our Comprehensive Treatment Services</h2>
-<p class="mt-2 text-slate-600 dark:text-slate-400">Utilizing the latest advancements in oncology to provide personalized care.</p>
+<div class="rounded-xl bg-background-light p-6 shadow-xl dark:bg-slate-900 md:p-12">
+<div class="grid grid-cols-1 gap-12 md:grid-cols-3">
+<div class="flex flex-col items-center gap-4 rounded-xl border border-slate-100 bg-brand-accent-light-blue/40 p-6 text-center dark:border-slate-800 dark:bg-slate-800/50">
+<span class="material-symbols-outlined text-4xl text-brand-blue-dark">model_training</span>
+<h3 class="text-lg font-bold">AI-Powered Diagnostics</h3>
+<p class="text-sm text-slate-600 dark:text-slate-400">Leveraging artificial intelligence for earlier, more accurate cancer detection and treatment planning.</p>
 </div>
-<!-- ImageGrid -->
-<div class="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-<div class="flex flex-col gap-4 rounded-xl border border-white/30 bg-white/60 p-6 text-center shadow-sm backdrop-blur-lg transition-all hover:-translate-y-1 hover:shadow-lg dark:border-slate-700/50 dark:bg-background-dark/60">
-<div class="mx-auto w-full max-w-32 bg-center bg-no-repeat aspect-square bg-cover" data-alt="3D icon for Chemotherapy" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBAUd24urWuaAMYf1PErQ6jUVG2XwbVNVYRPsROdOnSULW-gUA2nLNj559lMEmXsi0wdnlp222O1Cz2qVP2RRAZpjbn1mdEhwOv4-frDM1kKwE5SxQrcI4uTN04koAd9LkvPPp8vHp6JZTT_ARayr7CEY0GVRSZFWyd6wHQS8td1vcK_SuPxkrhZcEOo1wKaYlOqf5Cdp0iPLrNtth-vCZ61XDN2trYRxASX3EelzpZmnoGZel4J77Lyo12teQwIj49v2TudB3oLxs");'></div>
-<div>
-<p class="text-lg font-bold">Chemotherapy</p>
-<p class="text-sm text-slate-600 dark:text-slate-400">Targeted drug therapies to eliminate cancer cells.</p>
+<div class="flex flex-col items-center gap-4 rounded-xl border border-slate-100 bg-brand-accent-light-blue/40 p-6 text-center dark:border-slate-800 dark:bg-slate-800/50">
+<span class="material-symbols-outlined text-4xl text-brand-blue-dark">person</span>
+<h3 class="text-lg font-bold">Personalized Plans</h3>
+<p class="text-sm text-slate-600 dark:text-slate-400">Customized treatment strategies tailored to your unique genetic makeup and cancer type.</p>
 </div>
-</div>
-<div class="flex flex-col gap-4 rounded-xl border border-white/30 bg-white/60 p-6 text-center shadow-sm backdrop-blur-lg transition-all hover:-translate-y-1 hover:shadow-lg dark:border-slate-700/50 dark:bg-background-dark/60">
-<div class="mx-auto w-full max-w-32 bg-center bg-no-repeat aspect-square bg-cover" data-alt="3D icon for Radiotherapy" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDPvUhFfh0uMotUA4TU09bycedGHSeTOzN6a34bHgJsyJUwdTEZCo_VIqI2k-XDCjBmUBA3UvAedsaWtzLP15VTQB7AYwZkxup0sgNZYje4zewI1EhJNXwYCViHXaeqF_1WMbUe2_aH8vqu1Y43MG3AF1PEEWGmd9Ikzd2jtmJAWk9-TpmnbleC4a3SWcKpHWtxYwtErUklc41uhsQprRHit80y8c5iHdfHYgjAU0OB20IXlQezYmbttcC0RULHKGGEGUg-RNs1pJQ");'></div>
-<div>
-<p class="text-lg font-bold">Radiotherapy</p>
-<p class="text-sm text-slate-600 dark:text-slate-400">High-energy radiation to shrink tumors and destroy cancer cells.</p>
+<div class="flex flex-col items-center gap-4 rounded-xl border border-slate-100 bg-brand-accent-light-blue/40 p-6 text-center dark:border-slate-800 dark:bg-slate-800/50">
+<span class="material-symbols-outlined text-4xl text-brand-blue-dark">verified</span>
+<h3 class="text-lg font-bold">Proven Success Rates</h3>
+<p class="text-sm text-slate-600 dark:text-slate-400">Our outcomes consistently surpass national benchmarks, giving you the best chance at recovery.</p>
 </div>
 </div>
-<div class="flex flex-col gap-4 rounded-xl border border-white/30 bg-white/60 p-6 text-center shadow-sm backdrop-blur-lg transition-all hover:-translate-y-1 hover:shadow-lg dark:border-slate-700/50 dark:bg-background-dark/60">
-<div class="mx-auto w-full max-w-32 bg-center bg-no-repeat aspect-square bg-cover" data-alt="3D icon for Early Detection" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCyBc634U0hD3fmtm4a3glsPScH5gDx_nycUfMgjYWiYVweickkvv2cB47R8f_o9U550ELdxWzS--zkYuTd2ff4daeC1s8ofKqRkgr3_0QfKjxLGgeA8pSuhfOI_dwVdZD9N2PTNRt4bq4C5u-WnT3_SlyG_AOaDFqqWKChO6d5LvGjAkWVtEbCJdsnPXs1YbooAV2kKumI7RAKrloAciaK5vNee7EtgQ7gR_TtoSbgaxkx0Il3iD9Z7akaOyGubXkB33Nma-OJjII");'></div>
-<div>
-<p class="text-lg font-bold">Early Detection Screening</p>
-<p class="text-sm text-slate-600 dark:text-slate-400">Proactive screenings to detect cancer at its earliest, most treatable stage.</p>
+<div class="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2">
+<div class="text-center md:text-left">
+<p class="text-5xl font-bold text-brand-blue-dark dark:text-brand-blue-light">95%</p>
+<p class="mt-1 text-slate-600 dark:text-slate-400">Patient Satisfaction Rate</p>
+<p class="text-5xl font-bold text-brand-blue-dark dark:text-brand-blue-light mt-6">20%</p>
+<p class="mt-1 text-slate-600 dark:text-slate-400">Higher 5-Year Survival Rate than National Average</p>
 </div>
-</div>
-<div class="flex flex-col gap-4 rounded-xl border border-white/30 bg-white/60 p-6 text-center shadow-sm backdrop-blur-lg transition-all hover:-translate-y-1 hover:shadow-lg dark:border-slate-700/50 dark:bg-background-dark/60">
-<div class="mx-auto w-full max-w-32 bg-center bg-no-repeat aspect-square bg-cover" data-alt="3D icon for Lab Tests" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBAcCcLMgAbcJ6mAB-ijWBfpDVg9Mx4GC6rkazsmK_gN0OxGa4dljzSWnVL2djdomd_FMdUQEkVf1Epusk0Gu8WkjKag9OgDjfrC_2WhezieWGbOEyEbiPNIiffgMNrT_iCivg3zi9enDI49fEcDMG-WEX47rIbW5421j0K9rqZNUVKkrXOlTiqk_uzm_30wey3G-qd7v17MfTI0NfXWMTXzu2-kTi1oqOCJun-ScFGQqapsfgWDQo0YtlcH3V8bbGhZGNI2zAbv2c");'></div>
-<div>
-<p class="text-lg font-bold">Oncology Lab Tests</p>
-<p class="text-sm text-slate-600 dark:text-slate-400">Advanced laboratory analysis for precise diagnosis and treatment planning.</p>
-</div>
-</div>
-<div class="flex flex-col gap-4 rounded-xl border border-white/30 bg-white/60 p-6 text-center shadow-sm backdrop-blur-lg transition-all hover:-translate-y-1 hover:shadow-lg dark:border-slate-700/50 dark:bg-background-dark/60">
-<div class="mx-auto w-full max-w-32 bg-center bg-no-repeat aspect-square bg-cover" data-alt="3D icon for Immunotherapy" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCoAm0y5SPz6R1vFQOa5s_FXTpB_JDj3SRA9yfkrpgZVjYxRZ9zEPbceh_gfQQakVtdM56rGLwdAk5wkDsBEqKtan8zwGUZB-ifnJBtNn9AMuk9Rafw5GChWG2QTQIPfhl_adV3fOlatQ4cDDCM87ybrxWS2moQT4d42klYaXItEOnSJvXNtgBdbroOPT64XJVswbz9q6Xft7BPCb8a9tiPhZ7_v-V4o2W2IWC3V-EWoh03LnJE49n15FtXVzypDod1TmHtny8tSs4");'></div>
-<div>
-<p class="text-lg font-bold">Immunotherapy</p>
-<p class="text-sm text-slate-600 dark:text-slate-400">Boosting the body's natural defenses to fight cancer.</p>
-</div>
-</div>
-<div class="flex flex-col gap-4 rounded-xl border border-white/30 bg-white/60 p-6 text-center shadow-sm backdrop-blur-lg transition-all hover:-translate-y-1 hover:shadow-lg dark:border-slate-700/50 dark:bg-background-dark/60">
-<div class="mx-auto w-full max-w-32 bg-center bg-no-repeat aspect-square bg-cover" data-alt="3D icon for MRI and CT Scans" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAa1HHCXXWRghBZLUh7NrBq9fdeOusVwKGLEKjMRP7L_zPCNkXhoFK6D1bOENSn-5_bMwDU7a_L95J6IO0fVIS_9B_UtfIN3WimeCn6fwB1DGIQmG7dJsszVZsRLP7qVQ420QLo2tWBZrC2V-YN0miYd5khOogX6vtVAXmKETyqTLU1PiEq6CyDM0ia1f_fYoL4ZUdxvRdqRrvPPCfsylA849l7bKH8rhjVbhQ0FMalb8dUgaBDWrhaOFA93NIPGl1mcdNuKrvFzrU");'></div>
-<div>
-<p class="text-lg font-bold">MRI &amp; CT Scans</p>
-<p class="text-sm text-slate-600 dark:text-slate-400">Detailed imaging for accurate diagnosis and monitoring.</p>
-</div>
-</div>
-</div>
-</section>
-<!-- Clinic Environment Section -->
-<section class="py-16">
-<!-- SectionHeader -->
-<div class="text-center">
-<h2 class="text-3xl font-bold leading-tight tracking-tighter text-text-dark dark:text-text-light">A Modern &amp; Healing Environment</h2>
-<p class="mt-2 text-slate-600 dark:text-slate-400">Our clinic is designed to provide comfort, serenity, and hope.</p>
-</div>
-<div class="mt-12 w-full aspect-[16/9] bg-center bg-cover rounded-xl shadow-lg" data-alt="A soft-focus, high-resolution photo of a modern, serene clinic hallway with abundant natural light." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDLZ0sKAlsuMOCBxtJaKoQty8vvNNwLbVcXy3bUAaLS-QB6_BVqRtRESviBBa692eW53s7KQJdFv1oVCoDQwgs2cyU3WMufp0mppo_KJAPop7QiY8fuRHsij3FTouoa6aYDwDrz9oFYpzsl5IabUtNJP3CFWaG9EEOpRcv_PTtbnsXzOMWfNnHndVok6ckBsoDdZ7FKUhPu04jheZ7tfA1rI6PRLs8uVvZQuahACu3bgKnXRHNuqHIU5op8wteRBehgdAFUIpnLAJE");'></div>
-</section>
-<!-- Testimonial Section -->
-<section class="py-16">
-<div class="text-center">
-<h2 class="text-3xl font-bold leading-tight tracking-tighter text-text-dark dark:text-text-light">Stories of Hope</h2>
-<p class="mt-2 text-slate-600 dark:text-slate-400">Hear from our patients who have walked the path to recovery.</p>
-</div>
-<div class="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-<div class="flex flex-col items-center gap-4 rounded-xl border border-white/30 bg-white/60 p-6 text-center shadow-sm backdrop-blur-lg dark:border-slate-700/50 dark:bg-background-dark/60">
+<div class="flex flex-col items-center justify-center gap-4 rounded-xl border border-slate-100 bg-brand-accent-light-blue/40 p-6 text-center dark:border-slate-800 dark:bg-slate-800/50">
 <img class="h-20 w-20 rounded-full object-cover" data-alt="Profile picture of Sarah K." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDR_uJKEr2QFm3QjyQiAhF4nOkvsb59jWRcJar49l3rI0Dut_lpJV4aaFBEylKJtslbEf4xBgVtGf1rhJDdJMR3OOIr9YorMmIYOOythjPok6g-MfDe6DtzM8U4NuCaho2jD3IF1jLkM_G8clJx4EdQvJazyyDCx07tezL7ZOXMfZ07y2Cdt5DhporvVMtQqf-mIQcF8ntUDucUl1JV3HYbEv6Q4zYtx3UCDEBDDrMegHMlDlr_UMb-VuLAQRVCvoM-JJKFvOGt8eo"/>
 <blockquote class="italic text-slate-700 dark:text-slate-300">"The care and support I received at OncoClinic were beyond compare. The team felt like family, and their advanced technology gave me confidence in my treatment."</blockquote>
 <p class="font-bold">- Sarah K.</p>
 </div>
-<div class="flex flex-col items-center gap-4 rounded-xl border border-white/30 bg-white/60 p-6 text-center shadow-sm backdrop-blur-lg dark:border-slate-700/50 dark:bg-background-dark/60">
-<img class="h-20 w-20 rounded-full object-cover" data-alt="Profile picture of David L." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_s-5STLku9L7z29_xhSQdG8UbgfEjtsfZwgMd9hoEkHy9ktZa6GEqB-QEs5Yt4XOW04B8yJgYbQqTNFilExBsLTC3fl0XGIW066aeIIk2n1HzGanLcPzzmK9NjK3S10HtuddIG_ukx03wzhNlW2DWqzlOOnaCzUmyOiug_KiJCdQRTAkq6Y6JNVy48IKnVM3eovYqO6uriAv2SgdS_YhQME419prVSBCCGAj_qfbNTMabhEXlL9eYbOIiSn-4niRAYnRpAZcx1cg"/>
-<blockquote class="italic text-slate-700 dark:text-slate-300">"From the diagnosis to the final day of treatment, I knew I was in the best hands. The 3D diagnostics made everything so clear and less intimidating."</blockquote>
-<p class="font-bold">- David L.</p>
 </div>
-<div class="flex flex-col items-center gap-4 rounded-xl border border-white/30 bg-white/60 p-6 text-center shadow-sm backdrop-blur-lg dark:border-slate-700/50 dark:bg-background-dark/60">
-<img class="h-20 w-20 rounded-full object-cover" data-alt="Profile picture of Maria P." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMTd06tJY1KZBJDejAq6Pmmd73GlCWKoARJ3V7WTMNgJ5shPmPIOBVy_k4DI-JNOh4A9g4QbTaPTfJVH5UvYDehCHtqHtIHIZmTkG25xcMBrOeTHUetsfqcvlFK4OUKnk3CyqLt-9Be16cU7P-LhX_xA6M00JTI_Lly7HPYlhZvEOs-NZ1SpyhSFijJ540ATnFxyyfuX7GfENeuSo8DErbtPaF6TPrc9L7HFbVLZQdgAxfgI6B075A64VE-39o_-jwyu73Dkbdz20"/>
-<blockquote class="italic text-slate-700 dark:text-slate-300">"A truly healing environment. The staff’s compassion combined with cutting-edge science gave my family and me the hope we desperately needed."</blockquote>
-<p class="font-bold">- Maria P.</p>
+</div>
+</section>
+<section class="py-16">
+<div class="rounded-xl bg-background-light p-6 shadow-xl dark:bg-slate-900 md:p-12">
+<div class="text-center">
+<h2 class="text-3xl font-bold leading-tight tracking-tighter text-text-dark dark:text-text-light">Our Comprehensive Services</h2>
+<p class="mt-2 text-slate-600 dark:text-slate-400">Specialized care for every stage of your journey.</p>
+</div>
+<div class="mt-8 flex justify-center gap-4 border-b border-slate-200 dark:border-slate-700">
+<button class="px-4 py-2 font-semibold border-b-2 border-brand-blue-dark text-brand-blue-dark">By Cancer Type</button>
+<button class="px-4 py-2 font-semibold text-slate-500 hover:text-brand-blue-dark">By Treatment Type</button>
+</div>
+<div class="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+<div class="flex flex-col items-center gap-4 rounded-xl border border-slate-100 bg-brand-accent-light-blue/40 p-6 text-center transition-all hover:-translate-y-1 hover:shadow-lg dark:border-slate-800 dark:bg-slate-800/50">
+<span class="material-symbols-outlined text-4xl text-pink-500">female</span>
+<h3 class="text-lg font-bold">Breast Cancer</h3>
+<p class="text-sm text-slate-600 dark:text-slate-400">Comprehensive care from screening and diagnosis to treatment and survivorship.</p>
+</div>
+<div class="flex flex-col items-center gap-4 rounded-xl border border-slate-100 bg-brand-accent-light-blue/40 p-6 text-center transition-all hover:-translate-y-1 hover:shadow-lg dark:border-slate-800 dark:bg-slate-800/50">
+<span class="material-symbols-outlined text-4xl text-cyan-500">air</span>
+<h3 class="text-lg font-bold">Lung Cancer</h3>
+<p class="text-sm text-slate-600 dark:text-slate-400">Advanced therapies including targeted therapy, immunotherapy, and minimally invasive surgery.</p>
+</div>
+<div class="flex flex-col items-center gap-4 rounded-xl border border-slate-100 bg-brand-accent-light-blue/40 p-6 text-center transition-all hover:-translate-y-1 hover:shadow-lg dark:border-slate-800 dark:bg-slate-800/50">
+<span class="material-symbols-outlined text-4xl text-amber-600">medication</span>
+<h3 class="text-lg font-bold">Colon Cancer</h3>
+<p class="text-sm text-slate-600 dark:text-slate-400">Expert care including colonoscopy, surgical options, and advanced chemotherapy.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-16">
+<div class="grid grid-cols-1 gap-16 lg:grid-cols-2">
+<div class="rounded-xl bg-background-light p-6 shadow-xl dark:bg-slate-900 md:p-12">
+<h2 class="text-3xl font-bold leading-tight tracking-tighter text-text-dark dark:text-text-light">Meet Our Expert Oncologists</h2>
+<p class="mt-2 text-slate-600 dark:text-slate-400">A team of dedicated specialists committed to your care.</p>
+<div class="mt-8 space-y-6">
+<div class="flex items-center gap-4">
+<img alt="Dr. Emily Carter" class="h-20 w-20 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7tkd_msRdNYiqyTbfluyPAJrN_Rs6Qtqm0EhThxQTyeFpSxeJzivfAb8wr_ZBa_UI3Fd5PWeUpbiovbcfHth7xxeCRpHdFSYZ2IzgwCVioRcO9aWpOCvRaMtctbN5nkHUNtjqDrjqBEeo5Vc6WwCeaPyZ7FGaNtpZBmyfEwnjdFRazUCy3YEHymNv8rfv9K8blpkU3COURWBTEkVdqfMA6WOJgDeyM6wvSFnJsPnVb5Oj5hlq-eHJ5lkCyT9A5AN-iXzwQZkloeY"/>
+<div>
+<h4 class="font-bold">Dr. Emily Carter</h4>
+<p class="text-sm text-brand-blue-dark font-semibold">Head of Medical Oncology</p>
+<p class="text-sm text-slate-500">Specializes in breast cancer and immunotherapy.</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<img alt="Dr. Ben Hanna" class="h-20 w-20 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWpaUe2CsKG_cZ5TZcK3T5MqDTRHsSz8Gs9bRJ_-TzlG1m6tEChHGiiAYOHn_Ft_Ci4xk3X3iLi1V17AZSgnPb9Otl6pD2Z5_ZS0vwjUyau8Cp36qlluvCA5lTwNYg2LOu9VsyqANCJqrwPdl8mAi5qiNhrJyOeoQnLoW62i1amssCrvc2D4vWPwsuPX2KjODRRCkcsTxlItaWuzKYnpt-TN7SrYcyBQHmJBHBfD1NxctIl4-XC5hEUt8Lp5ALZW5WosxBO-0vzFs"/>
+<div>
+<h4 class="font-bold">Dr. Ben Hanna</h4>
+<p class="text-sm text-brand-blue-dark font-semibold">Director of Radiation Oncology</p>
+<p class="text-sm text-slate-500">Expert in advanced radiotherapy techniques.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="rounded-xl bg-background-light p-6 shadow-xl dark:bg-slate-900 md:p-12">
+<h2 class="text-3xl font-bold leading-tight tracking-tighter text-text-dark dark:text-text-light">Technology We Use</h2>
+<p class="mt-2 text-slate-600 dark:text-slate-400">State-of-the-art tools for precision and effectiveness.</p>
+<div class="mt-8 space-y-4">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-brand-blue-dark mt-1">biotech</span>
+<div>
+<h4 class="font-bold">Genomic Sequencing</h4>
+<p class="text-sm text-slate-500">Analyzing tumor DNA to identify targeted therapies.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-brand-blue-dark mt-1">settings_heart</span>
+<div>
+<h4 class="font-bold">CyberKnife S7 System</h4>
+<p class="text-sm text-slate-500">Robotic radiosurgery for precise tumor targeting.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-16">
+<div class="grid grid-cols-1 gap-12 lg:grid-cols-5">
+<div class="lg:col-span-3">
+<div class="rounded-xl bg-background-light p-6 shadow-xl dark:bg-slate-900 md:p-12">
+<h2 class="text-3xl font-bold leading-tight tracking-tighter text-text-dark dark:text-text-light">Take the Next Step</h2>
+<p class="mt-2 text-slate-600 dark:text-slate-400">Reach out today. Our team is ready to help you.</p>
+<form class="mt-8 space-y-4">
+<input class="w-full rounded-md border-slate-300 dark:bg-slate-800 dark:border-slate-600" placeholder="Full Name" type="text"/>
+<input class="w-full rounded-md border-slate-300 dark:bg-slate-800 dark:border-slate-600" placeholder="Email Address" type="email"/>
+<textarea class="w-full rounded-md border-slate-300 dark:bg-slate-800 dark:border-slate-600" placeholder="Your Message (Optional)" rows="4"></textarea>
+<button class="w-full flex h-12 min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-brand-red-cta px-5 text-base font-bold text-white transition-transform hover:scale-105" type="submit">
+                                        Request a Consultation
+                                    </button>
+</form>
+</div>
+</div>
+<div class="lg:col-span-2 space-y-6">
+<div class="rounded-xl bg-brand-accent-light-blue/60 p-6 dark:bg-slate-800/50">
+<h3 class="font-bold text-lg">Hotlines</h3>
+<p class="mt-2 text-slate-700 dark:text-slate-300">24/7 Nurse Hotline: <a class="text-brand-blue-dark dark:text-brand-blue-light font-semibold" href="tel:555-123-4567">(555) 123-4567</a></p>
+<p class="mt-1 text-slate-700 dark:text-slate-300">New Patient Line: <a class="text-brand-blue-dark dark:text-brand-blue-light font-semibold" href="tel:555-987-6543">(555) 987-6543</a></p>
+</div>
+<div class="rounded-xl bg-brand-accent-light-blue/60 p-6 dark:bg-slate-800/50">
+<h3 class="font-bold text-lg">Insurance &amp; Financial Info</h3>
+<p class="mt-2 text-slate-700 dark:text-slate-300">We accept most major insurance plans. Our financial counselors are available to assist you.</p>
+<a class="text-sm font-semibold text-brand-blue-dark dark:text-brand-blue-light mt-2 inline-block" href="#">Learn More</a>
+</div>
+<div class="h-48 w-full rounded-xl overflow-hidden shadow-lg">
+<iframe allowfullscreen="" class="w-full h-full" loading="lazy" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.089456543166!2d-122.4194154846813!3d37.77492957975951!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858064a9561585%3A0x86c57f59ed25f206!2sSan%20Francisco%20City%20Hall!5e0!3m2!1sen!2sus!4v1617263590483!5m2!1sen!2sus" style="border:0;"></iframe>
+</div>
 </div>
 </div>
 </section>
 </div>
 </main>
-<!-- Footer -->
-<footer class="mt-20 border-t border-slate-200 bg-white/50 dark:border-slate-800 dark:bg-background-dark/50">
-<div class="mx-auto max-w-5xl px-4 py-12">
-<div class="grid grid-cols-1 gap-8 md:grid-cols-4">
-<div class="col-span-1 md:col-span-2">
+<footer class="mt-20 border-t border-slate-200 bg-slate-50 dark:border-slate-800 dark:bg-slate-900/50">
+<div class="mx-auto max-w-7xl px-4 py-12">
+<div class="grid grid-cols-2 gap-8 md:grid-cols-5">
+<div class="col-span-2 md:col-span-2">
 <div class="flex items-center gap-3">
-<div class="size-6 text-primary-accent">
-<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M12.0799 24L4 19.2479L9.95537 8.75216L18.04 13.4961L18.0446 4H29.9554L29.96 13.4961L38.0446 8.75216L44 19.2479L35.92 24L44 28.7521L38.0446 39.2479L29.96 34.5039L29.9554 44H18.0446L18.04 34.5039L9.95537 39.2479L4 28.7521L12.0799 24Z" fill="currentColor" fill-rule="evenodd"></path></svg>
+<div class="size-6 text-brand-blue-dark">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M12.0799 24L4 19.2479L9.95537 8.75216L18.04 13.4961L18.0446 4H29.9554L29.96 13.4961L38.0446 8.75216L44 19.2479L35.92 24L44 28.7521L38.0446 39.2479L29.96 34.5039L29.9554 44H18.0446L18.04 34.5039L9.95537 39.2479L4 28.7521L12.0799 24Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
 </div>
 <h2 class="text-lg font-bold">OncoClinic</h2>
 </div>
 <p class="mt-4 text-sm text-slate-600 dark:text-slate-400">Leading the way in cancer treatment with compassion and innovation.</p>
+<div class="mt-6 flex gap-4">
+<a class="text-slate-500 hover:text-brand-blue-light" href="#"><svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+<path clip-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" fill-rule="evenodd"></path>
+</svg></a>
+<a class="text-slate-500 hover:text-brand-blue-light" href="#"><svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+<path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.71v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path>
+</svg></a>
+<a class="text-slate-500 hover:text-brand-blue-light" href="#"><svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+<path clip-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zM8.29 17.29a.75.75 0 01-1.06 0L4 14.061l1.06-1.06L8.29 15.17l5.65-5.65L15 10.58l-6.71 6.71z" fill-rule="evenodd"></path>
+</svg></a>
+</div>
 </div>
 <div>
-<h3 class="font-bold">Navigation</h3>
+<h3 class="font-bold">Sitemap</h3>
 <ul class="mt-4 space-y-2 text-sm">
-<li><a class="text-slate-600 hover:text-primary-accent dark:text-slate-400" href="#">About Us</a></li>
-<li><a class="text-slate-600 hover:text-primary-accent dark:text-slate-400" href="#">Treatments</a></li>
-<li><a class="text-slate-600 hover:text-primary-accent dark:text-slate-400" href="#">Our Team</a></li>
-<li><a class="text-slate-600 hover:text-primary-accent dark:text-slate-400" href="#">Contact</a></li>
+<li><a class="text-slate-600 hover:text-brand-blue-light dark:text-slate-400" href="#">Home</a></li>
+<li><a class="text-slate-600 hover:text-brand-blue-light dark:text-slate-400" href="#">Services</a></li>
+<li><a class="text-slate-600 hover:text-brand-blue-light dark:text-slate-400" href="#">Our Team</a></li>
+<li><a class="text-slate-600 hover:text-brand-blue-light dark:text-slate-400" href="#">Patient Resources</a></li>
+<li><a class="text-slate-600 hover:text-brand-blue-light dark:text-slate-400" href="#">Contact</a></li>
+</ul>
+</div>
+<div>
+<h3 class="font-bold">Legal</h3>
+<ul class="mt-4 space-y-2 text-sm">
+<li><a class="text-slate-600 hover:text-brand-blue-light dark:text-slate-400" href="#">Privacy Policy</a></li>
+<li><a class="text-slate-600 hover:text-brand-blue-light dark:text-slate-400" href="#">Terms of Service</a></li>
+<li><a class="text-slate-600 hover:text-brand-blue-light dark:text-slate-400" href="#">HIPAA Notice</a></li>
 </ul>
 </div>
 <div>
@@ -212,9 +306,10 @@
 </div>
 </div>
 <div class="mt-12 border-t border-slate-200 pt-8 text-center text-sm text-slate-500 dark:border-slate-800">
-<p>© 2024 OncoClinic. All rights reserved. | <a class="hover:underline" href="#">Privacy Policy</a></p>
+<p>© 2024 OncoClinic. All rights reserved.</p>
 </div>
 </div>
 </footer>
 </div>
+
 </body></html>
